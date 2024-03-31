@@ -1,6 +1,6 @@
 export default class APIError extends Error {
     statusCode: any
-    constructor(message?, statusCode?) {
+    constructor(message?: any, statusCode?: any) {
         super(message)
         this.statusCode = statusCode || 400
     }

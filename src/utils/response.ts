@@ -7,7 +7,7 @@ export default class Response {
         this.message = message
     }
 
-    success(res) {
+    success(res: any) {
         return res.status(200).json({
             success: true,
             data: this.data,
@@ -15,7 +15,7 @@ export default class Response {
         })
     }
 
-    created(res) {
+    created(res: any) {
         return res.status(201).json({
             success: true,
             data: this.data,
@@ -23,7 +23,7 @@ export default class Response {
         })
     }
 
-    error500(res) {
+    error500(res: any) {
         return res.status(500).json({
             success: false,
             data: this.data,
@@ -31,7 +31,7 @@ export default class Response {
         })
     }
 
-    error400(res) {
+    error400(res: any) {
         return res.status(400).json({
             success: false,
             data: this.data,
@@ -39,7 +39,7 @@ export default class Response {
         })
     }
 
-    error401(res) {
+    error401(res: any) {
         return res.status(401).json({
             success: false,
             data: this.data,
@@ -47,7 +47,7 @@ export default class Response {
         })
     }
 
-    error404(res) {
+    error404(res: any) {
         return res.status(404).json({
             success: false,
             data: this.data,
@@ -55,7 +55,7 @@ export default class Response {
         })
     }
 
-    error429(res) {
+    error429(res: any) {
         return res.status(429).json({
             success: false,
             data: this.data,
