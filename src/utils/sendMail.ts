@@ -1,7 +1,7 @@
-import {nodemailer} from "nodemailer";
+import nodemailer from "nodemailer";
 import APIError from "./errors";
 
-const sendMail = async (mailOptions) => {
+const sendMail = async (mailOptions: any) => {
     const transporter = await nodemailer.createTransport({
         host: "smtp-mail.outlook.com",
         port: 465,
@@ -12,7 +12,7 @@ const sendMail = async (mailOptions) => {
         }
     })
 
-    await transporter.sendMail(mailOptions, (error, info) => {
+    await transporter.sendMail(mailOptions, (error: any, info: any) => {
         if(error) {
             console.log("error while sending email: ", error);
             throw new APIError("Mail not send");
